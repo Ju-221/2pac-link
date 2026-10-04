@@ -1,0 +1,2 @@
+## 2 packet linker
+2pac-link is a small C++ console app that replaces Klink Kai by keeping the same basic idea—linking an Xbox-side network to an internet-side network through a host/join room flow—but cleaning it up into a simpler, easier-to-maintain project for new developers; build it with `make`, then run `./app -h` to host a room or `./app -j` to join one, and use the debug mode with `./app -h --DEBUG=1` while the app is still a prototype/lobby simulator rather than a full live network bridge.
