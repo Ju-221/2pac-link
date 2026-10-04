@@ -1,0 +1,19 @@
+name: C++ CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Compile application
+        run: clang++ -std=c++17 -Wall -Wextra -Wpedantic -Werror main.cpp -o app
+
+      - name: Run application
+        run: printf 'xbox0\nen0\n\ns\n' | ./app -h
